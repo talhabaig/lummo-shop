@@ -1,0 +1,15 @@
+
+body {
+    font-family: "Circular Std" ;
+    color: #374151;
+    // font-weight: 500;
+  }
+  img{
+    max-width: 100%;
+  }
+  /* fonts */
+  @font-face {
+    font-family: "Circular Std";
+    src: url("../fonts/CircularStd-Book.woff2");
+  }
+  @import url(_text.scss);
