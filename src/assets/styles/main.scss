@@ -1,15 +1,74 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: "Circular Std" ;
-    color: #374151;
-    // font-weight: 500;
+  font-family: "Circular Std";
+  color: #374151;
+  // font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* fonts */
+@font-face {
+  font-family: "Circular Std";
+  src: url("../fonts/CircularStd-Book.woff2");
+}
+
+@import url(_text.scss);
+
+.container,
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+
+  .container {
+    max-width: 540px;
   }
-  img{
-    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+
+
+  .container {
+    max-width: 720px;
   }
-  /* fonts */
-  @font-face {
-    font-family: "Circular Std";
-    src: url("../fonts/CircularStd-Book.woff2");
+}
+
+@media (min-width: 992px) {
+
+  .container {
+    max-width: 960px;
   }
-  @import url(_text.scss);
+}
+
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .container {
+    max-width: 1320px;
+  }
+}
+.row{
+  >div{
+    @media (min-width:576px) {
+      padding: 0 15px;
+    }
+  }
+}
