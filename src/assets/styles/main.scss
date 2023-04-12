@@ -1,12 +1,12 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Circular Std";
   color: #374151;
-  // font-weight: 500;
 }
 
 img {
@@ -16,7 +16,7 @@ img {
 /* fonts */
 @font-face {
   font-family: "Circular Std";
-  src: url("../fonts/CircularStd-Book.woff2");
+  src: url("../fonts/CircularStd-Medium.woff2");
 }
 
 @import url(_text.scss);
@@ -65,10 +65,48 @@ img {
     max-width: 1320px;
   }
 }
-.row{
-  >div{
+
+.row {
+  >div {
     @media (min-width:576px) {
       padding: 0 15px;
     }
+  }
+}
+
+.nth-row-reverse {
+  flex-direction: column-reverse;
+  text-align: center;
+
+  @media (min-width:768px) {
+    flex-direction: unset;
+    text-align: unset;
+  }
+
+  &:nth-child(odd) {
+    @media (min-width:768px) {
+      flex-direction: row-reverse;
+    }
+
+  }
+}
+button.carousel__next, button.carousel__prev{
+  width: 32px;
+  height: 32px;
+  background-color: #6f5fb3;
+  color: #311b92;
+  font-size: 1.125rem;
+  border-radius: 100%;
+}
+@keyframes fadeup {
+ 
+  0% {
+    opacity: 0;
+    transform: translate3d(0,30%,0);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }

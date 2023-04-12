@@ -2,7 +2,7 @@
   <div class="bg-blue">
     <div class="container">
       <div
-        class="grid gap-8 sm:gap-32 md:gap-0 grid-cols-1 md:grid-cols-2 items-center row py-[25px] md:py-[50px]"
+        class="grid gap-8 sm:gap-32 md:gap-0 grid-cols-1 md:grid-cols-2 items-center row py-[25px] md:pb-[50px] pt-[145px]"
       >
         <div>
           <div class="flex flex-col">
@@ -24,7 +24,7 @@
                 Create a demo Schedule
               </button>
               <button
-                class="bg-green text-blue text-[0.8rem] sm:text-[1rem] sm:py-3 sm:px-[1.85rem] py-2 px-3 rounded-md w-fit relative after:absolute after:top-[-15px] after:right-[-25px] after:px-[0.5rem] after:rounded-[16px] after:p-1 after:bg-white after:text-blue after:content-['Gratis'] after:text-[0.8rem] after:sm:text-[0.875rem] after:shadow-md"
+                class="bg-green text-blue text-[0.8rem] sm:text-[1rem] sm:py-3 sm:px-[1.85rem] py-2 px-3 rounded-md w-fit relative after:absolute after:top-[-15px] after:right-[-15px] after:sm:right-[-25px] after:px-[0.5rem] after:rounded-[16px] after:sm:py-[2px] after:bg-white after:text-blue after:content-['Gratis'] after:text-[0.8rem] after:sm:text-[0.875rem] after:shadow-md"
               >
                 From now on
               </button>
