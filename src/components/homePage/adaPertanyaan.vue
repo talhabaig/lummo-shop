@@ -41,6 +41,8 @@ export default {
               "Keempat, bisa atur pesanan dan pengiriman produk dari satu aplikasi. Pesanan dan pengiriman bisa dipantau dan dilakukan langsung dalam satu dashboard.",
           },
           {
+            itemid: 3,
+            show: false,
             title: "Bagaimana cara menggunakan aplikasi LummoSHOP?",
             description: "Cara menggunakan aplikasi LummoSHOP pun sangat mudah:",
             detail:
@@ -54,22 +56,30 @@ export default {
           },
 
           {
+            itemid: 5,
+            show: false,
             title: "Apakah data saya aman?",
             description:
               "Iya, semua data kamu tersimpan secara aman di Cloud Server jadi kamu bisa akses data kamu di mana saja dan kapan saja. Meskipun kamu ganti handphone, kamu masih dapat akses menggunakan nomor handphone yang terdaftar di LummoSHOP. Terima kasih sudah menggunakan aplikasi LummoSHOP.",
           },
           {
+            itemid: 2,
+            show: false,
             title: "Apakah akan ada fitur-fitur baru?",
             description:
               "Kami akan segera memperbarui LummoSHOP dengan lebih banyak fitur yang membantu kamu jualan online lebih maksimal, seperti bulk upload produk, pilihan kurir pengiriman yang lebih banyak, dan lainnya.",
           },
           {
+            itemid: 4,
+            show: false,
             title: "Apakah aplikasi ini gratis?",
             description:
               "LummoSHOP akan selalu GRATIS untuk diunduh dan membantu kamu dalam membuat website toko online pribadi langsung dari HP secara mudah. Hanya ada potongan biaya layanan transaksi sebesar 2,5% (untuk kategori makanan dan minuman) dan 1% (untuk kategori lainnya) dari total pembayaran di luar biaya pengiriman. Fitur LummoSHOP lainnya GRATIS digunakan tanpa dikenakan biaya dan kamu juga bebas unggah produk sebanyak-banyaknya.",
           },
 
           {
+            itemid: 6,
+            show: false,
             title: "Gratis berapa lama?",
             description:
               "Fitur yang ada pada LummoSHOP saat ini akan selalu gratis untuk digunakan. LummoSHOP membantu kamu untuk membuat toko online / online shop bisnismu! GRATIS! Apa pun usahamu, kini semua orang bisa jualan online dan tingkatkan pendapatan dan keuntungan. Dengan LummoSHOP, kamu bisa buat produk katalog dari tokomu di handphone dan bagikan dengan pelangganmu lewat WhatsApp, Facebook, Instagram, dan lainnya. Jualan jadi lebih mudah dan bisa dilakukan kapan saja dan di mana saja dari handphonemu dengan LummoSHOP. Terima kasih sudah menggunakan aplikasi LummoSHOP.",
