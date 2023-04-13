@@ -1,20 +1,89 @@
 <template>
-  <div class="">
-    {{ data.heading }}
-    <br />
-    <div v-for="(d, i) in data.list" :key="i" class="flex">
+  <div class="container py-[80px]">
+    <div class="text-center mx-auto">
+      <h2 class="text-2xl md:text-4xl mb-16">{{ data.heading }}</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 row">
       <div>
-        <img :src="`src/assets/img/${d.image}`" alt="" />
+        <div v-for="(d, i) in data.list" :key="i" class="mb-5">
+          <div
+            class="flex flex-col px-6 bg-[#eae8f4] border border-[#ada4d3] rounded-[4px]"
+          >
+            <div
+              @click="itemShow1 !== d.itemid ? (itemShow1 = d.itemid) : (itemShow1 = -1)"
+              class="flex items-center justify-between cursor-pointer"
+            >
+              <div
+                class="py-3 text-[15px] max-w-[80%] overflow-hidden text-ellipsis whitespace-nowrap"
+              >
+                {{ d.title }}
+              </div>
+              <div class="icon">
+                <svg
+                  class="fill-blue accordion-transition"
+                  :class="{ 'svg-icon': d.itemid === itemShow1 }"
+                  width="14px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448  512"
+                >
+                  <path
+                    d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="max-h-0 overflow-hidden accordion-transition"
+              :class="{ 'max-h-[500px]': d.itemid === itemShow1 }"
+            >
+              <div class="text-[12px] lg:text-[13px] leading-[1.43rem] py-4">
+                {{ d.description }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
       <div>
-        <span>LANGKAH {{ i + 1 }}</span>
-        <br />
-        {{ d.title }}
-        <br />
-        {{ d.description }}
+        <div v-for="(d, i) in data.list2" :key="i" class="mb-5">
+          <div
+            class="flex flex-col px-6 bg-[#eae8f4] border border-[#ada4d3] rounded-[4px]"
+          >
+            <div
+              @click="itemShow2 !== d.itemid ? (itemShow2 = d.itemid) : (itemShow2 = -1)"
+              class="flex items-center justify-between cursor-pointer"
+            >
+              <div
+                class="py-3 text-[15px] max-w-[80%] overflow-hidden text-ellipsis whitespace-nowrap"
+              >
+                {{ d.title }}
+              </div>
+              <div class="icon">
+                <svg
+                  class="fill-blue accordion-transition"
+                  :class="{ 'svg-icon': d.itemid === itemShow2 }"
+                  width="14px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448  512"
+                >
+                  <path
+                    d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="max-h-0 overflow-hidden accordion-transition"
+              :class="{ 'max-h-[500px]': d.itemid === itemShow2 }"
+            >
+              <div class="text-[12px] lg:text-[13px] leading-[1.43rem] py-4">
+                {{ d.description }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="text-center mt-10 text-blue">Temukan jawaban lainnya di sini</div>
   </div>
 </template>
 
@@ -23,6 +92,10 @@ export default {
   components: {},
   data() {
     return {
+      showAccordion: false,
+      itemShow1: -1,
+      itemShow2: -1,
+
       data: {
         heading: "Ada Pertanyaan? Temukan Jawabannya di Sini!",
         list: [
@@ -62,6 +135,8 @@ export default {
             description:
               "Iya, semua data kamu tersimpan secara aman di Cloud Server jadi kamu bisa akses data kamu di mana saja dan kapan saja. Meskipun kamu ganti handphone, kamu masih dapat akses menggunakan nomor handphone yang terdaftar di LummoSHOP. Terima kasih sudah menggunakan aplikasi LummoSHOP.",
           },
+        ],
+        list2: [
           {
             itemid: 2,
             show: false,

@@ -90,6 +90,12 @@ img {
 
   }
 }
+.accordion-transition{
+  transition: all .4s ease;
+}
+.svg-icon{
+  transform: rotate(180deg);
+}
 button.carousel__next, button.carousel__prev{
   width: 32px;
   height: 32px;

@@ -15,7 +15,7 @@
         <Slide v-for="(d, i) in data.list" :key="i">
           <div class="flex flex-col p-[25px]">
             <div class="carousel__item">
-              <div class="max-w-[340px]">
+              <div class="max-w-[200px] sm:max-w-[340px]">
                 <img :src="`src/assets/img/${d.image}`" alt="" />
               </div>
             </div>

@@ -6,6 +6,7 @@
     <cocokUntuk />
     <kata-mereka />
     <banyakMetodo />
+    <ada-pertanyaan />
   </div>
 </template>
 <script>
@@ -15,6 +16,7 @@ import cocokUntuk from "../components/homePage/cocokUntuk.vue";
 import HeroSection from "../components/homePage/heroSection.vue";
 import KataMereka from "../components/homePage/kataMereka.vue";
 import banyakMetodo from "../components/homePage/banyakMetodo.vue";
+import AdaPertanyaan from "../components/homePage/adaPertanyaan.vue";
 export default {
   components: {
     banyakFitur,
@@ -23,6 +25,7 @@ export default {
     HeroSection,
     KataMereka,
     banyakMetodo,
+    AdaPertanyaan,
   },
   data() {
     return {};

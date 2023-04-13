@@ -2,27 +2,35 @@
   <div class="bg-blue">
     <div class="container">
       <div
-        class="grid gap-8 sm:gap-32 md:gap-0 grid-cols-1 md:grid-cols-2 items-center row py-[25px] md:pb-[50px] pt-[145px]">
+        class="grid gap-8 sm:gap-32 md:gap-0 grid-cols-1 md:grid-cols-2 items-center row py-[25px] md:pb-[50px] pt-[145px]"
+      >
         <div>
           <div class="flex flex-col">
             <h1
-              class="text-[2.3rem] lg:text-[3.1rem] leading-[2.875rem] lg:leading-[3.8rem] font-extrabold text-green mb-4">
-              Tempat Bisnis 
+              class="text-[2.3rem] lg:text-[3.1rem] leading-[2.875rem] lg:leading-[3.8rem] font-extrabold text-green mb-4"
+            >
+              Tempat Bisnis
               <span class="typed-text">{{ typeValue }}</span>
               <span class="blinking-cursor">|</span>
               <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
               <!-- <span class="text-white"> headscaffdfdf</span> -->
-              <span class="block"> Mulai Toko Online-mu, Pegang Kendali untuk Berkembang</span>
+              <span class="block">
+                Mulai Toko Online-mu, Pegang Kendali untuk Berkembang</span
+              >
             </h1>
-            <span class="text-white text-[0.9375rem]">With a complete & practical online store website, there are no more
-              barriers to optimizing your business growth opportunities.</span>
+            <span class="text-white text-[0.9375rem]"
+              >With a complete & practical online store website, there are no more
+              barriers to optimizing your business growth opportunities.</span
+            >
             <div class="flex md:flex-col lg:flex-row gap-3 mt-9">
               <button
-                class="bg-white text-blue sm:py-3 sm:px-[1.85rem] py-2 px-3 text-[0.8rem] sm:text-[1rem] rounded-md border border-[#d1d5db] w-fit">
+                class="bg-white text-blue sm:py-3 sm:px-[1.85rem] py-2 px-3 text-[0.8rem] sm:text-[1rem] rounded-md border border-[#d1d5db] w-fit"
+              >
                 Create a demo Schedule
               </button>
               <button
-                class="bg-green text-blue text-[0.8rem] sm:text-[1rem] sm:py-3 sm:px-[1.85rem] py-2 px-3 rounded-md w-fit relative after:absolute after:top-[-15px] after:right-[-15px] after:sm:right-[-25px] after:px-[0.5rem] after:rounded-[16px] after:sm:py-[2px] after:bg-white after:text-blue after:content-['Gratis'] after:text-[0.8rem] after:sm:text-[0.875rem] after:shadow-md">
+                class="bg-green text-blue text-[0.8rem] sm:text-[1rem] sm:py-3 sm:px-[1.85rem] py-2 px-3 rounded-md w-fit relative after:absolute after:top-[-15px] after:right-[-15px] after:sm:right-[-25px] after:px-[0.5rem] after:rounded-[16px] after:sm:py-[2px] after:bg-white after:text-blue after:content-['Gratis'] after:text-[0.8rem] after:sm:text-[0.875rem] after:shadow-md"
+              >
                 From now on
               </button>
             </div>
@@ -43,7 +51,16 @@ export default {
     return {
       typeValue: "",
       typeStatus: false,
-      displayTextArray: ["Fashion", "F&B","Kuliner","Kecantikan","Hijab", "Mainan" ,"Hobi", "KULINER"],
+      displayTextArray: [
+        "Fashion",
+        "F&B",
+        "Kuliner",
+        "Kecantikan",
+        "Hijab",
+        "Mainan",
+        "Hobi",
+        "KULINER",
+      ],
       typingSpeed: 100,
       erasingSpeed: 100,
       newTextDelay: 2000,
@@ -52,8 +69,8 @@ export default {
     };
   },
   created() {
-   setTimeout(this.typeText, this.newTextDelay + 200);
-},
+    setTimeout(this.typeText, this.newTextDelay + 200);
+  },
   methods: {
     typeText() {
       if (this.charIndex < this.displayTextArray[this.displayTextArrayIndex].length) {
@@ -86,18 +103,17 @@ export default {
       }
     },
   },
-}
+};
 </script>
-<style lang="scss" scoped> 
-
-h1 {  
+<style lang="scss" scoped>
+h1 {
   span.typed-text {
     color: white;
   }
 }
 
 // Cursor blinking CSS Starts...
-.blinking-cursor { 
+.blinking-cursor {
   color: white;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
@@ -107,7 +123,6 @@ h1 {
 }
 
 @keyframes blink {
-
   from,
   to {
     color: transparent;
@@ -118,52 +133,5 @@ h1 {
   }
 }
 
-@-moz-keyframes blink {
-
-  from,
-  to {
-    color: transparent;
-  }
-
-  50% {
-    color: white;
-  }
-}
-
-@-webkit-keyframes blink {
-
-  from,
-  to {
-    color: transparent;
-  }
-
-  50% {
-    color: white;
-  }
-}
-
-@-ms-keyframes blink {
-
-  from,
-  to {
-    color: transparent;
-  }
-
-  50% {
-    color: white;
-  }
-}
-
-@-o-keyframes blink {
-
-  from,
-  to {
-    color: transparent;
-  }
-
-  50% {
-    color: white;
-  }
-}
-
-// Cursor blinking CSS Ends...</style>
+// Cursor blinking CSS Ends...
+</style>
