@@ -42,23 +42,23 @@
           <span class="text-blue text-[1.25rem] mb-5">Connect</span>
           <ul class="flex sm:flex-col justify-between">
             <li class="mb-[12px] flex items-center">
-              <i class="fa-brands fa-twitter text-[1.25rem] mr-2"></i
+              <i class="fa-brands text-blue fa-twitter text-[1.25rem] mr-2"></i
               ><span class="hidden sm:inline">Twitter</span>
             </li>
             <li class="mb-[12px] flex items-center">
-              <i class="fa-brands fa-facebook text-[1.25rem] mr-2"></i
+              <i class="fa-brands text-blue fa-facebook text-[1.25rem] mr-2"></i
               ><span class="hidden sm:inline">FaceBook</span>
             </li>
             <li class="mb-[12px] flex items-center">
-              <i class="fa-brands fa-instagram text-[1.25rem] mr-2"></i
+              <i class="fa-brands text-blue fa-instagram text-[1.25rem] mr-2"></i
               ><span class="hidden sm:inline">Instagram</span>
             </li>
             <li class="mb-[12px] flex items-center">
-              <i class="fa-brands fa-youtube text-[1.25rem] mr-2"></i
+              <i class="fa-brands text-blue fa-youtube text-[1.25rem] mr-2"></i
               ><span class="hidden sm:inline">Youtube</span>
             </li>
             <li class="mb-[12px] flex items-center">
-              <i class="fa-brands fa-tiktok text-[1.25rem] mr-2"></i
+              <i class="fa-brands text-blue fa-tiktok text-[1.25rem] mr-2"></i
               ><span class="hidden sm:inline">TikTok</span>
             </li>
           </ul>

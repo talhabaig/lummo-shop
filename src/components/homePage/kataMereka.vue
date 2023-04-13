@@ -24,7 +24,7 @@
             <div class="flex items-center gap-4 mt-9">
               <div
                 @click="previous()"
-                class="flex justify-center items-center w-[32px] h-[32px] text-white bg-[#9ca3af] rounded-full"
+                class="flex justify-center items-center w-[32px] h-[32px] text-white bg-[#9ca3af] rounded-full cursor-pointer"
               >
                 <svg
                   class="w-[14px]"
@@ -44,7 +44,7 @@
               </div>
               <div
                 @click="next"
-                class="flex justify-center items-center w-[32px] h-[32px] text-white bg-[#9ca3af] rounded-full"
+                class="flex justify-center items-center w-[32px] h-[32px] text-white bg-[#9ca3af] rounded-full cursor-pointer"
               >
                 <svg
                   class="w-[14px]"

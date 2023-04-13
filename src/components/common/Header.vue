@@ -35,10 +35,22 @@
         :class="{ 'flex h-[253px]': showMenu }"
       >
         <ul class="flex lg:flex-row flex-col items-center m-auto lg:m-0">
-          <li class="p-[12px]">Unduh LummoSHOP</li>
-          <li class="p-[12px]">Upgrade LummoSHOP</li>
-          <li class="p-[12px]">Layanan</li>
-          <li class="p-[12px]">Jelajahi</li>
+          <li class="p-[12px] cursor-pointer">Unduh LummoSHOP</li>
+          <li class="p-[12px] cursor-pointer">Upgrade LummoSHOP</li>
+          <li class="p-[12px] cursor-pointer flex items-center relative">
+            Layanan<i class="fa-sharp fa-solid fa-angle-down ml-2"></i>
+            <ul
+              class="min-[180px] bg-white shadow-lg text-[#374151] absolute top-0 z-10 hidden"
+            >
+              <li class="px-4 py-[0.5rem]">Toko Online</li>
+              <li class="px-4 py-[0.5rem]">Pengiriman</li>
+              <li class="px-4 py-[0.5rem]">Pembayaran</li>
+              <li class="px-4 py-[0.5rem]">Domain</li>
+            </ul>
+          </li>
+          <li class="p-[12px] cursor-pointer flex items-center">
+            Jelajahi<i class="fa-sharp fa-solid fa-angle-down ml-2"></i>
+          </li>
         </ul>
 
         <div class="flex flex-col lg:flex-row w-fit m-auto lg:m-0 lg:gap-3 text-[12px]">
