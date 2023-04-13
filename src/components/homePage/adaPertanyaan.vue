@@ -15,6 +15,7 @@
             >
               <div
                 class="py-3 text-[15px] max-w-[80%] overflow-hidden text-ellipsis whitespace-nowrap"
+                :class="{ 'whitespace-normal': d.itemid === itemShow1 }"
               >
                 {{ d.title }}
               </div>
@@ -54,6 +55,7 @@
             >
               <div
                 class="py-3 text-[15px] max-w-[80%] overflow-hidden text-ellipsis whitespace-nowrap"
+                :class="{ 'whitespace-normal': d.itemid === itemShow2 }"
               >
                 {{ d.title }}
               </div>

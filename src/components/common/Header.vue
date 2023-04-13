@@ -1,7 +1,7 @@
 <template>
   <div class="bg-blue fixed z-40 w-full">
     <nav
-      class="max-w-[1270px] m-auto flex flex-col lg:flex-row justify-between lg:items-center px-[30px] py-6 text-white text-[0.875rem]"
+      class="max-w-[1270px] m-auto flex flex-col lg:flex-row justify-between lg:items-center px-[30px] py-4 text-white text-[0.875rem]"
     >
       <div class="flex items-center justify-between">
         <div class="w-[102px] lg:w-[152px]">
