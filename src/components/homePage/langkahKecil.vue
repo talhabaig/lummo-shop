@@ -1,7 +1,10 @@
 <template>
   <div class="py-[100px]">
     <div class="container">
-      <div class="max-w-[775px] text-center mx-auto mb-20">
+      <div
+        class="max-w-[775px] text-center mx-auto mb-20"
+        v-motion-slide-visible-once-bottom
+      >
         <h2 class="text-2xl md:text-4xl my-6">
           {{ data.heading }}
         </h2>
@@ -11,12 +14,12 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 row">
-        <div v-for="(d, i) in data.list" :key="i" class="mb-12">
+        <div v-for="(d, i) in data.list" :key="i" class="mb-12 targe">
           <div class="flex flex-col items-center text-center">
-            <div class="max-w-[370px] mx-auto">
+            <div class="max-w-[370px] mx-auto" v-motion-slide-visible-once-bottom>
               <img :src="`src/assets/img/${d.image}`" alt="" />
             </div>
-            <div class="flex flex-col max-w-[500px]">
+            <div class="flex flex-col max-w-[500px]" v-motion-slide-visible-once-bottom>
               <span class="block mb-4">LANGKAH {{ i + 1 }}</span>
               <span class="mb-3 lg:text-[1.875rem] text-[1.23rem]">
                 {{ d.title }}

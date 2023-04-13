@@ -1,6 +1,6 @@
 <template>
   <div class="container py-[80px]">
-    <div class="text-center mx-auto">
+    <div class="text-center mx-auto" v-motion-slide-visible-once-bottom>
       <h2 class="text-2xl md:text-4xl mb-16">{{ data.heading }}</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 row">
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div v-motion-slide-visible-once-bottom>
         <div v-for="(d, i) in data.list2" :key="i" class="mb-5">
           <div
             class="flex flex-col px-6 bg-[#eae8f4] border border-[#ada4d3] rounded-[4px]"

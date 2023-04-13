@@ -104,6 +104,21 @@ button.carousel__next, button.carousel__prev{
   font-size: 1.125rem;
   border-radius: 100%;
 }
+.fadein{
+  animation: fadeIn .5s linear;
+  // background-color: red;
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.target{
+  animation: fadeup 1s linear;
+}
 @keyframes fadeup {
  
   0% {

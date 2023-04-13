@@ -2,7 +2,10 @@
   <div class="bg-blue py-8 md:py-[70px]">
     <div class="container carousel">
       <div>
-        <div class="max-w-[775px] text-center mx-auto">
+        <div
+          class="max-w-[775px] text-center mb-6 mx-auto"
+          v-motion-slide-visible-once-bottom
+        >
           <h2 class="text-2xl md:text-4xl my-6 text-white">
             {{ data.heading }}
           </h2>
@@ -11,11 +14,16 @@
           </span>
         </div>
       </div>
-      <Carousel :items-to-show="1" :wrap-around="true" :breakpoints="breakpoints">
+      <Carousel
+        :items-to-show="1"
+        :wrap-around="true"
+        :breakpoints="breakpoints"
+        v-motion-slide-visible-once-bottom
+      >
         <Slide v-for="(d, i) in data.list" :key="i">
           <div class="flex flex-col p-[25px]">
             <div class="carousel__item">
-              <div class="max-w-[200px] sm:max-w-[340px]">
+              <div class="max-w-[200px] sm:max-w-[280px]">
                 <img :src="`src/assets/img/${d.image}`" alt="" />
               </div>
             </div>

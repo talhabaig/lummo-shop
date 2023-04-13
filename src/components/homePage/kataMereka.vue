@@ -1,18 +1,26 @@
 <template>
   <div class="bg-[#f4f9fd] py-[100px]">
     <div class="container">
-      <div class="text-center mx-auto">
+      <div class="text-center mx-auto" v-motion-slide-visible-once-bottom>
         <h2 class="text-2xl md:text-4xl mb-16">
           {{ data.heading }}
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 items-center row">
-        <div>
+        <div
+          :class="{ fadein: isActive }"
+          class="max-w-[464px] m-auto"
+          v-motion-slide-visible-once-bottom
+        >
           <img :src="`src/assets/img/${data.selectedData.image}`" alt="" />
         </div>
         <div>
-          <div class="flex flex-col pl-5">
+          <div
+            class="flex flex-col"
+            :class="{ fadein: isActive }"
+            v-motion-slide-visible-once-bottom
+          >
             <h4 class="mb-1 text-[1.5rem] text-blue">
               {{ data.selectedData.title }}
             </h4>
@@ -21,42 +29,42 @@
             </span>
             <span class="block mt-4 text-blue"> {{ data.selectedData.name }}</span>
             <span class="text-[#6f5fb3]"> {{ data.selectedData.brand }}</span>
-            <div class="flex items-center gap-4 mt-9">
-              <div
-                @click="previous()"
-                class="flex justify-center items-center w-[32px] h-[32px] text-white bg-[#9ca3af] rounded-full cursor-pointer"
+          </div>
+          <div class="flex items-center gap-4 mt-9">
+            <div
+              @click="previous()"
+              class="flex justify-center items-center w-[32px] h-[32px] text-white bg-[#9ca3af] rounded-full cursor-pointer"
+            >
+              <svg
+                class="w-[14px]"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
               >
-                <svg
-                  class="w-[14px]"
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
-                  />
-                </svg>
-              </div>
-              <div class="flex gap-1">
-                <span>{{ data.selectedData.id }}</span>
-                <span>/</span>
-                <span>{{ data.list.length }}</span>
-              </div>
-              <div
-                @click="next"
-                class="flex justify-center items-center w-[32px] h-[32px] text-white bg-[#9ca3af] rounded-full cursor-pointer"
+                <path
+                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                />
+              </svg>
+            </div>
+            <div class="flex gap-1">
+              <span>{{ data.selectedData.id }}</span>
+              <span>/</span>
+              <span>{{ data.list.length }}</span>
+            </div>
+            <div
+              @click="next"
+              class="flex justify-center items-center w-[32px] h-[32px] text-white bg-[#9ca3af] rounded-full cursor-pointer"
+            >
+              <svg
+                class="w-[14px]"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
               >
-                <svg
-                  class="w-[14px]"
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-                  />
-                </svg>
-              </div>
+                <path
+                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                />
+              </svg>
             </div>
           </div>
         </div>
@@ -70,6 +78,7 @@ export default {
   components: {},
   data() {
     return {
+      isActive: false,
       data: {
         heading: "Kata Mereka yang Jualan Online di LummoSHOP?",
         selectedData: {
@@ -147,6 +156,7 @@ export default {
           (x) => x.id > this.data.selectedData.id
         )[0];
       }
+      this.isActive = !this.isActive;
     },
     previous() {
       if (this.data.selectedData.id > 1) {
@@ -154,6 +164,7 @@ export default {
           .filter((x) => x.id < this.data.selectedData.id)
           .reverse()[0];
       }
+      this.isActive = !this.isActive;
     },
   },
 };

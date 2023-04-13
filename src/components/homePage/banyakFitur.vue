@@ -1,7 +1,22 @@
 <template>
+  <div
+    v-motion
+    :initial="{
+      opacity: 0,
+      y: 100,
+    }"
+    :enter="{
+      opacity: 1,
+      y: 0,
+    }"
+  />
+
   <div class="bg-[#eef2ff]">
     <div class="container py-16">
-      <div class="max-w-[775px] text-center mx-auto mb-20">
+      <div
+        class="max-w-[775px] text-center mx-auto mb-20"
+        v-motion-slide-visible-once-bottom
+      >
         <h2 class="text-2xl md:text-4xl my-6">
           {{ data.heading }}
         </h2>
@@ -12,9 +27,9 @@
       <div
         v-for="(d, i) in data.list"
         :key="i"
-        class="flex flex-col md:flex-row gap-12 md:gap-0 row items-center mb-10 nth-row-reverse"
+        class="targe flex flex-col md:flex-row gap-12 md:gap-0 row items-center mb-10 nth-row-reverse"
       >
-        <div class="md:w-2/4">
+        <div class="md:w-2/4" v-motion-slide-visible-once-bottom>
           <div class="lg:px-12 w-full">
             <h3 class="lg:text-[1.875rem] text-[1.25rem]">
               {{ d.title }}
@@ -24,7 +39,7 @@
             </span>
           </div>
         </div>
-        <div class="md:w-2/4">
+        <div class="md:w-2/4" v-motion-slide-visible-once-bottom>
           <img :src="`src/assets/img/${d.image}`" alt="" />
         </div>
       </div>
