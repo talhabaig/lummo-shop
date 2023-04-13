@@ -88,14 +88,7 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-.container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+<style lang="scss" scoped> 
 
 h1 {  
   span.typed-text {
@@ -105,7 +98,7 @@ h1 {
 
 // Cursor blinking CSS Starts...
 .blinking-cursor { 
-  color: #2c3e50;
+  color: white;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -121,7 +114,7 @@ h1 {
   }
 
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 
@@ -133,7 +126,7 @@ h1 {
   }
 
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 
@@ -145,7 +138,7 @@ h1 {
   }
 
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 
@@ -157,7 +150,7 @@ h1 {
   }
 
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 
@@ -169,7 +162,7 @@ h1 {
   }
 
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 
