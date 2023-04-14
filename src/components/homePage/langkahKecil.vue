@@ -17,7 +17,7 @@
         <div v-for="(d, i) in data.list" :key="i" class="mb-12 targe">
           <div class="flex flex-col items-center text-center">
             <div class="max-w-[370px] mx-auto" v-motion-slide-visible-once-bottom>
-              <img :src="`src/assets/img/${d.image}`" alt="" />
+              <img :src="d.image" alt="" />
             </div>
             <div class="flex flex-col max-w-[500px]" v-motion-slide-visible-once-bottom>
               <span class="block mb-4">LANGKAH {{ i + 1 }}</span>
@@ -36,6 +36,10 @@
 </template>
 
 <script>
+import image1 from "../../assets/img/image-step-1.png";
+import image2 from "../../assets/img/image-step-2.png";
+import image3 from "../../assets/img/image-step-3.png";
+import image4 from "../../assets/img/image-step-4.png";
 export default {
   components: {},
   data() {
@@ -48,25 +52,25 @@ export default {
             title: "Mulai Bikin Toko Online-mu",
             description:
               "Masukkan nama brand-mu dan pastikan sesuai dengan nama yang tertera pada link website untuk mempermudah branding toko online-mu.",
-            image: "image-step-1.png",
+            image: image1,
           },
           {
             title: "Produk-mu Jadi Pusat Perhatian",
             description:
               "Tanpa saingan & perang harga, pengunjung lebih terpikat untuk membeli.",
-            image: "image-step-2.png",
+            image: image2,
           },
           {
             title: "Upload Ribuan Produkmu ke Katalog dalam Hitungan Menit",
             description:
               "Tanpa ribet, tampilkan seluruh produk kamu dengan berbagai variannya!",
-            image: "image-step-3.png",
+            image: image3,
           },
           {
             title: "Fitur Pembayaran & Pengiriman Lengkap",
             description:
               "Selengkap e-commerce. Memudahkan pembeli-mu memilih jenis pembayaran & pengiriman sesuai kebutuhan.",
-            image: "image-step-4.png",
+            image: image4,
           },
         ],
       },

@@ -13,7 +13,7 @@
           class="max-w-[464px] m-auto"
           v-motion-slide-visible-once-bottom
         >
-          <img :src="`src/assets/img/${data.selectedData.image}`" alt="" />
+          <img :src="data.selectedData.image" alt="" />
         </div>
         <div>
           <div
@@ -74,6 +74,13 @@
 </template>
 
 <script>
+import image1 from "../../assets/img/petite-bakery-testimony.png";
+import image2 from "../../assets/img/petite-bakery-testimony.png";
+import image3 from "../../assets/img/bababerry_testimonial.png";
+import image4 from "../../assets/img/bungopark.png";
+import image5 from "../../assets/img/sambal-mbul.png";
+import image6 from "../../assets/img/mookie-1.png";
+import image7 from "../../assets/img/salam-resto-cafe.png";
 export default {
   components: {},
   data() {
@@ -88,7 +95,7 @@ export default {
           brand: "Petite Bakery",
           description:
             "LummoSHOP mempermudah saya dalam membuat website jualan online, tanpa harus memikirkan dana tambahan. Fiturnya yang lengkap bisa saya pakai dengan GRATIS",
-          image: "petite-bakery-testimony.png",
+          image: image1,
         },
         list: [
           {
@@ -98,7 +105,7 @@ export default {
             brand: "Petite Bakery",
             description:
               "LummoSHOP mempermudah saya dalam membuat website jualan online, tanpa harus memikirkan dana tambahan. Fiturnya yang lengkap bisa saya pakai dengan GRATIS",
-            image: "petite-bakery-testimony.png",
+            image: image2,
           },
           {
             id: 2,
@@ -107,7 +114,7 @@ export default {
             brand: "Bababerry",
             description:
               "Semua semakin terintegrasi sehingga berjualan menjadi lebih efisien. Tinggal klik, kurir siap dipesan dan barang tinggal dikirim. Saat pesanan sudah sampai otomatis notifikasi pesanan akan masuk di aplikasi dan juga WhatsApp.",
-            image: "bababerry_testimonial.png",
+            image: image3,
           },
           {
             id: 3,
@@ -116,7 +123,7 @@ export default {
             brand: "Bungoprak",
             description:
               "LummoSHOP, selain berfungsi sebagai web-catalog, sangat memudahkan konsumen saya untuk bertransaksi. Mereka bisa pilih cara pembayaran yang mereka suka. Voucher LummoSHOP juga berhasil membuat konsumen saya nyaman.",
-            image: "bungopark.png",
+            image: image4,
           },
           {
             id: 4,
@@ -125,7 +132,7 @@ export default {
             brand: "Sambal Mbul",
             description:
               "LummoSHOP mempermudah saya untuk membuat dan memantau pesanan pelanggan. Serta tips dan pelatihan bisnis dari tim LummoSHOP membantu saya dalam mengembangkan bisnis",
-            image: "sambal-mbul.png",
+            image: image5,
           },
           {
             id: 5,
@@ -134,7 +141,7 @@ export default {
             brand: "Mookie",
             description:
               "Dengan fitur integrasi pembayaran dan logistik dari LummoSHOP. Membantu saya dalam memberikan service yang terbaik kepada pelanggan dan sangat mudah digunakan bagi pelanggan saya",
-            image: "mookie-1.png",
+            image: image6,
           },
           {
             id: 6,
@@ -143,7 +150,7 @@ export default {
             brand: "Salam Resto & Cafe",
             description:
               "LummoSHOP membantu saya dalam meningkatkan omzet penjualan. Karena, dengan link LummoSHOP yang saya sebar ke pelanggan dapat meningkatkan brand saya, tanpa khawatir dengan produk dari penjual lain.",
-            image: "salam-resto-cafe.png",
+            image: image7,
           },
         ],
       },

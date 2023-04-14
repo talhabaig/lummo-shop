@@ -24,16 +24,12 @@
           <div class="flex flex-col p-[25px]">
             <div class="carousel__item">
               <div class="max-w-[200px] sm:max-w-[280px]">
-                <img :src="`src/assets/img/${d.image}`" alt="" />
+                <img :src="d.image" alt="" />
               </div>
             </div>
             <div class="flex gap-2 my-6 items-center">
               <div class="w-[42px] h-[42px]">
-                <img
-                  class="rounded-full"
-                  :src="`src/assets/img/${d.imageLogo}`"
-                  alt="logo"
-                />
+                <img class="rounded-full" :src="d.imageLogo" alt="logo" />
               </div>
               <div class="flex flex-col leading-4">
                 <span class="text-white">
@@ -58,6 +54,14 @@
 
 <script>
 import { Carousel, Navigation, Slide } from "vue3-carousel";
+import image1 from "../../assets/img/pejuang-store.png";
+import image2 from "../../assets/img/wesafeu-mockup-810p-1650p.png";
+import image3 from "../../assets/img/wannabe-19-mockup-810p-1650p.png";
+import image4 from "../../assets/img/vr_tjendol.png";
+import imagelogo1 from "../../assets/img/logo-store-1.jpg";
+import imagelogo2 from "../../assets/img/logo-store-2.jpg";
+import imagelogo3 from "../../assets/img/logo-store-3.jpg";
+import imagelogo4 from "../../assets/img/logo-store-4.jpg";
 export default {
   components: {
     Carousel,
@@ -83,26 +87,26 @@ export default {
           {
             title: "Petite Bakery",
             description: "pakistan",
-            image: "pejuang-store.png",
-            imageLogo: "logo-store-1.jpg",
+            image: image1,
+            imageLogo: imagelogo1,
           },
           {
             title: "Petite Bakery",
             description: "pakistan",
-            image: "wesafeu-mockup-810p-1650p.png",
-            imageLogo: "logo-store-2.jpg",
+            image: image2,
+            imageLogo: imagelogo2,
           },
           {
             title: "Petite Bakery",
             description: "pakistan",
-            image: "wannabe-19-mockup-810p-1650p.png",
-            imageLogo: "logo-store-3.jpg",
+            image: image3,
+            imageLogo: imagelogo3,
           },
           {
             title: "Petite Bakery",
             description: "pakistan ",
-            image: "vr_tjendol.png",
-            imageLogo: "logo-store-4.jpg",
+            image: image4,
+            imageLogo: imagelogo4,
           },
         ],
       },

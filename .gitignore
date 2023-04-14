@@ -3,3 +3,9 @@ node_modules/
 /dist/
 
 package-log.json
+# Edgio generated build directory
+.edgio
+
+# Edgio generated build directory
+.edgio
+.firebase

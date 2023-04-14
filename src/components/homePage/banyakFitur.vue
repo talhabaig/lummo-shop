@@ -1,16 +1,4 @@
 <template>
-  <div
-    v-motion
-    :initial="{
-      opacity: 0,
-      y: 100,
-    }"
-    :enter="{
-      opacity: 1,
-      y: 0,
-    }"
-  />
-
   <div class="bg-[#eef2ff]">
     <div class="container py-16">
       <div
@@ -40,7 +28,7 @@
           </div>
         </div>
         <div class="md:w-2/4" v-motion-slide-visible-once-bottom>
-          <img :src="`src/assets/img/${d.image}`" alt="" />
+          <img :src="d.image" alt="" />
         </div>
       </div>
     </div>
@@ -48,6 +36,10 @@
 </template>
 
 <script>
+import image1 from "../../assets/img/Website-Toko.png";
+import image2 from "../../assets/img/Produk-mu.png";
+import image3 from "../../assets/img/Upload-Ribuan.png";
+import image4 from "../../assets/img/Fitur-Pembayaran.png";
 export default {
   components: {},
   data() {
@@ -61,25 +53,25 @@ export default {
             title: "Website Toko Online yang Mudah Dikelola",
             description:
               "Pengelolaan bisnis semakin praktis dengan sistem manajemen order, pembayaran, hingga pengiriman barang yang lengkap.",
-            image: "Website-Toko.png",
+            image: image1,
           },
           {
             title: "Produk-mu Jadi Pusat Perhatian",
             description:
               "Tanpa saingan & perang harga, pengunjung lebih terpikat untuk membeli.",
-            image: "Produk-mu.png",
+            image: image2,
           },
           {
             title: "Upload Ribuan Produkmu ke Katalog dalam Hitungan Menit",
             description:
               "Tanpa ribet, tampilkan seluruh produk kamu dengan berbagai variannya!",
-            image: "Upload-Ribuan.png",
+            image: image3,
           },
           {
             title: "Fitur Pembayaran & Pengiriman Lengkap",
             description:
               "Selengkap e-commerce. Memudahkan pembeli-mu memilih jenis pembayaran & pengiriman sesuai kebutuhan.",
-            image: "Fitur-Pembayaran.png",
+            image: image4,
           },
         ],
       },

@@ -34,8 +34,8 @@
               </div>
             </div>
             <div
-              class="max-h-0 overflow-hidden accordion-transition"
-              :class="{ 'max-h-[500px]': d.itemid === itemShow1 }"
+              class="h-0 overflow-hidden accordion-transition"
+              :class="{ 'h-[200px]': d.itemid === itemShow1 }"
             >
               <div class="text-[12px] lg:text-[13px] leading-[1.43rem] py-4">
                 {{ d.description }}
@@ -74,8 +74,8 @@
               </div>
             </div>
             <div
-              class="max-h-0 overflow-hidden accordion-transition"
-              :class="{ 'max-h-[500px]': d.itemid === itemShow2 }"
+              class="h-0 overflow-hidden accordion-transition"
+              :class="{ 'h-[200px]': d.itemid === itemShow2 }"
             >
               <div class="text-[12px] lg:text-[13px] leading-[1.43rem] py-4">
                 {{ d.description }}
