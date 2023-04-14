@@ -10,9 +10,12 @@
               class="text-[2.3rem] lg:text-[3.1rem] leading-[2.875rem] lg:leading-[3.8rem] font-extrabold text-green mb-4"
             >
               Tempat Bisnis
-              <span class="typed-text">{{ typeValue }}</span>
-              <span class="blinking-cursor">|</span>
-              <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+
+              <span class="block lg:inline">
+                <span class="typed-text">{{ typeValue }}</span>
+                <span class="blinking-cursor">|</span>
+                <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
+              </span>
               <!-- <span class="text-white"> headscaffdfdf</span> -->
               <span class="block">
                 Mulai Toko Online-mu, Pegang Kendali untuk Berkembang</span

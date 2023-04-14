@@ -90,13 +90,17 @@ img {
 
   }
 }
-.accordion-transition{
+
+.accordion-transition {
   transition: all .4s ease;
 }
-.svg-icon{
+
+.svg-icon {
   transform: rotate(180deg);
 }
-button.carousel__next, button.carousel__prev{
+
+button.carousel__next,
+button.carousel__prev {
   width: 32px;
   height: 32px;
   background-color: #6f5fb3;
@@ -104,33 +108,59 @@ button.carousel__next, button.carousel__prev{
   font-size: 1.125rem;
   border-radius: 100%;
 }
-.fadein{
+
+.fadein {
   animation: fadeIn .5s linear;
   // background-color: red;
 }
+
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
 }
-.target{
+
+.target {
   animation: fadeup 1s linear;
 }
+
 @keyframes fadeup {
- 
+
   0% {
     opacity: 0;
-    transform: translate3d(0,30%,0);
+    transform: translate3d(0, 30%, 0);
   }
-  
+
   100% {
     opacity: 1;
     transform: none;
   }
 }
-.whitespace-normal{
+
+.whitespace-normal {
   white-space: normal;
+}
+
+.dropdown {
+  ul {
+    display: none;
+    min-width: 150px;
+    animation: fadeIn .3s linear;
+
+  }
+
+  &:hover ul {
+    display: block;
+
+    li {
+      &:hover {
+        background-color: rgba(190, 190, 190, 0.2);
+        ;
+      }
+    }
+  }
 }

@@ -31,25 +31,37 @@
         </div>
       </div>
       <div
-        class="transition-all duration-300 lg:flex lg:gap-2 items-center flex-col lg:flex-row h-0 lg:h-auto overflow-hidden"
-        :class="{ 'flex h-[253px]': showMenu }"
+        class="transition-all duration-300 lg:flex lg:gap-2 items-center flex-col lg:flex-row max-h-0 lg:h-auto overflow-hidden lg:overflow-visible"
+        :class="{ 'flex max-h-[500px]': showMenu }"
       >
         <ul class="flex lg:flex-row flex-col items-center m-auto lg:m-0">
           <li class="p-[12px] cursor-pointer">Unduh LummoSHOP</li>
           <li class="p-[12px] cursor-pointer">Upgrade LummoSHOP</li>
-          <li class="p-[12px] cursor-pointer flex items-center relative">
+          <li
+            class="p-[12px] cursor-pointer block text-center lg:text-start lg:flexitems-center relative dropdown"
+          >
             Layanan<i class="fa-sharp fa-solid fa-angle-down ml-2"></i>
             <ul
-              class="min-[180px] bg-white shadow-lg text-[#374151] absolute top-0 z-10 hidden"
+              class="min-[180px] bg-white shadow-lg py-1 text-[#374151] rounded-lg lg:absolute top-[37px] right-[-7px] z-10"
             >
-              <li class="px-4 py-[0.5rem]">Toko Online</li>
-              <li class="px-4 py-[0.5rem]">Pengiriman</li>
-              <li class="px-4 py-[0.5rem]">Pembayaran</li>
-              <li class="px-4 py-[0.5rem]">Domain</li>
+              <li class="px-5 py-[0.5rem]">Toko Online</li>
+              <li class="px-5 py-[0.5rem]">Pengiriman</li>
+              <li class="px-5 py-[0.5rem]">Pembayaran</li>
+              <li class="px-5 py-[0.5rem]">Domain</li>
             </ul>
           </li>
-          <li class="p-[12px] cursor-pointer flex items-center">
+          <li
+            class="p-[12px] cursor-pointer block text-center lg:text-start lg:flex items-center relative dropdown"
+          >
             Jelajahi<i class="fa-sharp fa-solid fa-angle-down ml-2"></i>
+            <ul
+              class="min-[180px] bg-white shadow-lg py-1 text-[#374151] rounded-lg lg:absolute top-[37px] right-[-7px] z-10"
+            >
+              <li class="px-5 py-[0.5rem]">Toko Online</li>
+              <li class="px-5 py-[0.5rem]">Pengiriman</li>
+              <li class="px-5 py-[0.5rem]">Pembayaran</li>
+              <li class="px-5 py-[0.5rem]">Domain</li>
+            </ul>
           </li>
         </ul>
 
